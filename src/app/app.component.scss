@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #e41414; /* Black background */
+    color: #fff; /* White text */
+    padding: 15px;
+    display: flex; /* Align links horizontally */
+    justify-content: space-around; /* Distribute links evenly */
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;}
+
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

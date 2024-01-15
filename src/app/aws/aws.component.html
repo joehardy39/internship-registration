@@ -1,0 +1,65 @@
+<h3>SELECT VALUES</h3>
+
+
+<input (keyup)="FilterName($any($event.target).value)" matInput placeholder="Name Search">
+<input (keyup)="FilterNumber($any($event.target).value)" matInput placeholder="City Search">
+<input (keyup)="FilterPhone($any($event.target).value)" matInput placeholder="Phone Search">
+
+<div #TABLE class="example-container mat-elevation-z8">
+   <mat-table id="InternData" matTableExporter #table [dataSource]="dataSource" >
+
+     <ng-container matColumnDef="Name">
+      
+       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+       
+       <mat-cell *matCellDef="let element"> {{ element.Name }} </mat-cell>
+     </ng-container>
+ 
+     <ng-container matColumnDef="City">
+       <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+       <mat-cell *matCellDef="let element"> {{ element.City }} </mat-cell>
+     </ng-container>
+
+     <ng-container matColumnDef="Phone">
+      <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.Phone }} </mat-cell>
+    </ng-container>
+
+     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+     <tr mat-row
+       *matRowDef="let row; columns: displayedColumns"
+       (click)="onCLick(row)"
+     ></tr>
+   </mat-table>
+ </div>
+ <br>
+ <div class="export-container">
+	<button mat-raised-button color="primary" (click)="exportTable()">Export Material Table</button>
+</div>
+ 
+<!--<div class="container"-->
+<!--   <table class="table table-bordered table-dark table-hover">-->
+<!--      <thead class="thead-dark">-->
+<!--         <tr>-->
+<!--            <th scope="col">-->
+<!--               Name-->
+<!--            </th>-->
+<!--            <th scope="col">-->
+<!--               City-->
+<!--            </th>-->
+<!--         </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--         <tr scope="row" (click)="r1click()" >-->
+<!--            <td>Hardik</td>-->
+<!--            <td>Surat</td>-->
+<!--         </tr>-->
+<!--         <tr scope="row">-->
+<!--            <td>Neel</td>-->
+<!--            <td>Ahmedabad</td>-->
+<!--         </tr>-->
+<!--      </tbody>-->
+<!--
+<!-   </table>-->
+<!--</div>-->
+
