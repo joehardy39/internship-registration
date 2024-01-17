@@ -11,6 +11,9 @@ import { HoComponent } from './ho/ho.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { HttpClientModule } from "@angular/common/http";
+import { IpComponent } from './ip/ip.component';
+import { BrowserInfoComponent } from './browser-info/browser-info.component';
 
 
 
@@ -21,6 +24,8 @@ import {MatSortModule} from '@angular/material/sort';
     AIComponent,
     AwsComponent,
     HoComponent,
+    IpComponent,
+    BrowserInfoComponent,
     
     
   ],
@@ -32,6 +37,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    HttpClientModule
     
     
 

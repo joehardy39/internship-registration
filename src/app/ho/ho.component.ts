@@ -22,6 +22,10 @@ export class HoComponent {
     Phone: new FormControl('', [Validators.required,Validators.minLength(2)]),
   })
 
+  currentTime = new Date().toLocaleString();
+  
+  
+
   submitted = false;
   FormValue : any;
    
@@ -32,6 +36,8 @@ export class HoComponent {
   ngOnInit() : void {
     
     this.FormValue = this.data.getData();
+    console.log(this.currentTime)
+    
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -62,6 +68,7 @@ export class HoComponent {
     
     console.log(this.check)
     window.alert("Submitted Successfully!");
+    
     
   } 
 
